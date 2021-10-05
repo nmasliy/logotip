@@ -34,7 +34,7 @@
                         <a href="#" class="mobile-header__icon">
                             <img src="images/search.svg" alt="Search">
                         </a>
-                        <a href="#" class="mobile-header__icon">
+                        <a href="#" data-micromodal-trigger="modal-cart" class="mobile-header__icon">
                             <img src="images/cart.svg" alt="Cart">
                             <div class="mobile-header__icon-counter">12</div>
                         </a>
@@ -356,7 +356,7 @@
                         </div>
                         
                     </div>
-                    <a href="#" class="mobile-menu__head-item">
+                    <a href="#" data-micromodal-trigger="modal-cart" class="mobile-menu__head-item">
                         <div class="mobile-menu__head-icon">
                             <img src="images/cart.svg" alt="Cart">
                         </div>
@@ -430,242 +430,320 @@
                             <button class="modal__close" data-micromodal-close aria-label="Close this dialog window">
                                 <img data-micromodal-close src="images/close.svg" alt="Close modal">
                             </button>
-                            <div class="modal__content">
-                                <div class="modal__title">Контакты</div>
-                                <div class="modal-contacts__items">
-                                    <div class="modal-contacts__item">
-                                        <div class="modal-contacts__img">
-                                            <img src="images/geo.svg" alt="Наш магазин">
-                                        </div>
-                                        <div class="modal-contacts__text">
-                                            <div class="modal-contacts__name">Наш магазин №1</div>
-                                            <div class="modal-contacts__address">Київ, вул. Пирогова, 8</div>
-                                            <div class="modal-contacts__hidden">
-                                                <div class="modal-contacts__phones">
-                                                    <a href="tel:+38 (093) 502 25 25">+38 (093) 502 25 25</a>
-                                                    <a href="tel:+38 (067) 502 25 25">+38 (067) 502 25 25</a>
-                                                    <a href="tel:0 800 502 255">0 800 502 255</a>
-                                                </div>
-                                                <a href="tel:info.magazin@gmail.com">info.magazin@gmail.com</a>
-                                                <div class="modal-contacts__schedule">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">пн. - пт.</td>
-                                                            <td>9:00 - 18:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">сб</td>
-                                                            <td>9:00 - 15:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">нд</td>
-                                                            <td>выходной</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="modal__title">Контакты</div>
+                            <div class="modal-contacts__items">
+                                <div class="modal-contacts__item">
+                                    <div class="modal-contacts__img">
+                                        <img src="images/geo.svg" alt="Наш магазин">
                                     </div>
-                                    <div class="modal-contacts__item">
-                                        <div class="modal-contacts__img">
-                                            <img src="images/geo.svg" alt="Наш магазин">
-                                        </div>
-                                        <div class="modal-contacts__text">
-                                            <div class="modal-contacts__name">Наш магазин №1</div>
-                                            <div class="modal-contacts__address">Київ, вул. Пирогова, 8</div>
-                                            <div class="modal-contacts__hidden">
-                                                <div class="modal-contacts__phones">
-                                                    <a href="tel:+38 (093) 502 25 25">+38 (093) 502 25 25</a>
-                                                    <a href="tel:+38 (067) 502 25 25">+38 (067) 502 25 25</a>
-                                                    <a href="tel:0 800 502 255">0 800 502 255</a>
-                                                </div>
-                                                <a href="tel:info.magazin@gmail.com">info.magazin@gmail.com</a>
-                                                <div class="modal-contacts__schedule">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">пн. - пт.</td>
-                                                            <td>9:00 - 18:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">сб</td>
-                                                            <td>9:00 - 15:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">нд</td>
-                                                            <td>выходной</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
+                                    <div class="modal-contacts__text">
+                                        <div class="modal-contacts__name">Наш магазин №1</div>
+                                        <div class="modal-contacts__address">Київ, вул. Пирогова, 8</div>
+                                        <div class="modal-contacts__hidden">
+                                            <div class="modal-contacts__phones">
+                                                <a href="tel:+38 (093) 502 25 25">+38 (093) 502 25 25</a>
+                                                <a href="tel:+38 (067) 502 25 25">+38 (067) 502 25 25</a>
+                                                <a href="tel:0 800 502 255">0 800 502 255</a>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-contacts__item">
-                                        <div class="modal-contacts__img">
-                                            <img src="images/geo.svg" alt="Наш магазин">
-                                        </div>
-                                        <div class="modal-contacts__text">
-                                            <div class="modal-contacts__name">Наш магазин №1</div>
-                                            <div class="modal-contacts__address">Київ, вул. Пирогова, 8</div>
-                                            <div class="modal-contacts__hidden">
-                                                <div class="modal-contacts__phones">
-                                                    <a href="tel:+38 (093) 502 25 25">+38 (093) 502 25 25</a>
-                                                    <a href="tel:+38 (067) 502 25 25">+38 (067) 502 25 25</a>
-                                                    <a href="tel:0 800 502 255">0 800 502 255</a>
-                                                </div>
-                                                <a href="tel:info.magazin@gmail.com">info.magazin@gmail.com</a>
-                                                <div class="modal-contacts__schedule">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">пн. - пт.</td>
-                                                            <td>9:00 - 18:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">сб</td>
-                                                            <td>9:00 - 15:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">нд</td>
-                                                            <td>выходной</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-contacts__item">
-                                        <div class="modal-contacts__img">
-                                            <img src="images/geo.svg" alt="Наш магазин">
-                                        </div>
-                                        <div class="modal-contacts__text">
-                                            <div class="modal-contacts__name">Наш магазин №1</div>
-                                            <div class="modal-contacts__address">Київ, вул. Пирогова, 8</div>
-                                            <div class="modal-contacts__hidden">
-                                                <div class="modal-contacts__phones">
-                                                    <a href="tel:+38 (093) 502 25 25">+38 (093) 502 25 25</a>
-                                                    <a href="tel:+38 (067) 502 25 25">+38 (067) 502 25 25</a>
-                                                    <a href="tel:0 800 502 255">0 800 502 255</a>
-                                                </div>
-                                                <a href="tel:info.magazin@gmail.com">info.magazin@gmail.com</a>
-                                                <div class="modal-contacts__schedule">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">пн. - пт.</td>
-                                                            <td>9:00 - 18:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">сб</td>
-                                                            <td>9:00 - 15:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">нд</td>
-                                                            <td>выходной</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-contacts__item">
-                                        <div class="modal-contacts__img">
-                                            <img src="images/geo.svg" alt="Наш магазин">
-                                        </div>
-                                        <div class="modal-contacts__text">
-                                            <div class="modal-contacts__name">Наш магазин №1</div>
-                                            <div class="modal-contacts__address">Київ, вул. Пирогова, 8</div>
-                                            <div class="modal-contacts__hidden">
-                                                <div class="modal-contacts__phones">
-                                                    <a href="tel:+38 (093) 502 25 25">+38 (093) 502 25 25</a>
-                                                    <a href="tel:+38 (067) 502 25 25">+38 (067) 502 25 25</a>
-                                                    <a href="tel:0 800 502 255">0 800 502 255</a>
-                                                </div>
-                                                <a href="tel:info.magazin@gmail.com">info.magazin@gmail.com</a>
-                                                <div class="modal-contacts__schedule">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">пн. - пт.</td>
-                                                            <td>9:00 - 18:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">сб</td>
-                                                            <td>9:00 - 15:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">нд</td>
-                                                            <td>выходной</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-contacts__item">
-                                        <div class="modal-contacts__img">
-                                            <img src="images/geo.svg" alt="Наш магазин">
-                                        </div>
-                                        <div class="modal-contacts__text">
-                                            <div class="modal-contacts__name">Наш магазин №1</div>
-                                            <div class="modal-contacts__address">Київ, вул. Пирогова, 8</div>
-                                            <div class="modal-contacts__hidden">
-                                                <div class="modal-contacts__phones">
-                                                    <a href="tel:+38 (093) 502 25 25">+38 (093) 502 25 25</a>
-                                                    <a href="tel:+38 (067) 502 25 25">+38 (067) 502 25 25</a>
-                                                    <a href="tel:0 800 502 255">0 800 502 255</a>
-                                                </div>
-                                                <a href="tel:info.magazin@gmail.com">info.magazin@gmail.com</a>
-                                                <div class="modal-contacts__schedule">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">пн. - пт.</td>
-                                                            <td>9:00 - 18:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">сб</td>
-                                                            <td>9:00 - 15:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">нд</td>
-                                                            <td>выходной</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-contacts__item">
-                                        <div class="modal-contacts__img">
-                                            <img src="images/geo.svg" alt="Наш магазин">
-                                        </div>
-                                        <div class="modal-contacts__text">
-                                            <div class="modal-contacts__name">Наш магазин №1</div>
-                                            <div class="modal-contacts__address">Київ, вул. Пирогова, 8</div>
-                                            <div class="modal-contacts__hidden">
-                                                <div class="modal-contacts__phones">
-                                                    <a href="tel:+38 (093) 502 25 25">+38 (093) 502 25 25</a>
-                                                    <a href="tel:+38 (067) 502 25 25">+38 (067) 502 25 25</a>
-                                                    <a href="tel:0 800 502 255">0 800 502 255</a>
-                                                </div>
-                                                <a href="tel:info.magazin@gmail.com">info.magazin@gmail.com</a>
-                                                <div class="modal-contacts__schedule">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">пн. - пт.</td>
-                                                            <td>9:00 - 18:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">сб</td>
-                                                            <td>9:00 - 15:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="modal-contacts__schedule-day">нд</td>
-                                                            <td>выходной</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
+                                            <a href="tel:info.magazin@gmail.com">info.magazin@gmail.com</a>
+                                            <div class="modal-contacts__schedule">
+                                                <table>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">пн. - пт.</td>
+                                                        <td>9:00 - 18:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">сб</td>
+                                                        <td>9:00 - 15:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">нд</td>
+                                                        <td>выходной</td>
+                                                    </tr>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                
+                                <div class="modal-contacts__item">
+                                    <div class="modal-contacts__img">
+                                        <img src="images/geo.svg" alt="Наш магазин">
+                                    </div>
+                                    <div class="modal-contacts__text">
+                                        <div class="modal-contacts__name">Наш магазин №1</div>
+                                        <div class="modal-contacts__address">Київ, вул. Пирогова, 8</div>
+                                        <div class="modal-contacts__hidden">
+                                            <div class="modal-contacts__phones">
+                                                <a href="tel:+38 (093) 502 25 25">+38 (093) 502 25 25</a>
+                                                <a href="tel:+38 (067) 502 25 25">+38 (067) 502 25 25</a>
+                                                <a href="tel:0 800 502 255">0 800 502 255</a>
+                                            </div>
+                                            <a href="tel:info.magazin@gmail.com">info.magazin@gmail.com</a>
+                                            <div class="modal-contacts__schedule">
+                                                <table>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">пн. - пт.</td>
+                                                        <td>9:00 - 18:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">сб</td>
+                                                        <td>9:00 - 15:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">нд</td>
+                                                        <td>выходной</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-contacts__item">
+                                    <div class="modal-contacts__img">
+                                        <img src="images/geo.svg" alt="Наш магазин">
+                                    </div>
+                                    <div class="modal-contacts__text">
+                                        <div class="modal-contacts__name">Наш магазин №1</div>
+                                        <div class="modal-contacts__address">Київ, вул. Пирогова, 8</div>
+                                        <div class="modal-contacts__hidden">
+                                            <div class="modal-contacts__phones">
+                                                <a href="tel:+38 (093) 502 25 25">+38 (093) 502 25 25</a>
+                                                <a href="tel:+38 (067) 502 25 25">+38 (067) 502 25 25</a>
+                                                <a href="tel:0 800 502 255">0 800 502 255</a>
+                                            </div>
+                                            <a href="tel:info.magazin@gmail.com">info.magazin@gmail.com</a>
+                                            <div class="modal-contacts__schedule">
+                                                <table>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">пн. - пт.</td>
+                                                        <td>9:00 - 18:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">сб</td>
+                                                        <td>9:00 - 15:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">нд</td>
+                                                        <td>выходной</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-contacts__item">
+                                    <div class="modal-contacts__img">
+                                        <img src="images/geo.svg" alt="Наш магазин">
+                                    </div>
+                                    <div class="modal-contacts__text">
+                                        <div class="modal-contacts__name">Наш магазин №1</div>
+                                        <div class="modal-contacts__address">Київ, вул. Пирогова, 8</div>
+                                        <div class="modal-contacts__hidden">
+                                            <div class="modal-contacts__phones">
+                                                <a href="tel:+38 (093) 502 25 25">+38 (093) 502 25 25</a>
+                                                <a href="tel:+38 (067) 502 25 25">+38 (067) 502 25 25</a>
+                                                <a href="tel:0 800 502 255">0 800 502 255</a>
+                                            </div>
+                                            <a href="tel:info.magazin@gmail.com">info.magazin@gmail.com</a>
+                                            <div class="modal-contacts__schedule">
+                                                <table>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">пн. - пт.</td>
+                                                        <td>9:00 - 18:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">сб</td>
+                                                        <td>9:00 - 15:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">нд</td>
+                                                        <td>выходной</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-contacts__item">
+                                    <div class="modal-contacts__img">
+                                        <img src="images/geo.svg" alt="Наш магазин">
+                                    </div>
+                                    <div class="modal-contacts__text">
+                                        <div class="modal-contacts__name">Наш магазин №1</div>
+                                        <div class="modal-contacts__address">Київ, вул. Пирогова, 8</div>
+                                        <div class="modal-contacts__hidden">
+                                            <div class="modal-contacts__phones">
+                                                <a href="tel:+38 (093) 502 25 25">+38 (093) 502 25 25</a>
+                                                <a href="tel:+38 (067) 502 25 25">+38 (067) 502 25 25</a>
+                                                <a href="tel:0 800 502 255">0 800 502 255</a>
+                                            </div>
+                                            <a href="tel:info.magazin@gmail.com">info.magazin@gmail.com</a>
+                                            <div class="modal-contacts__schedule">
+                                                <table>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">пн. - пт.</td>
+                                                        <td>9:00 - 18:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">сб</td>
+                                                        <td>9:00 - 15:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">нд</td>
+                                                        <td>выходной</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-contacts__item">
+                                    <div class="modal-contacts__img">
+                                        <img src="images/geo.svg" alt="Наш магазин">
+                                    </div>
+                                    <div class="modal-contacts__text">
+                                        <div class="modal-contacts__name">Наш магазин №1</div>
+                                        <div class="modal-contacts__address">Київ, вул. Пирогова, 8</div>
+                                        <div class="modal-contacts__hidden">
+                                            <div class="modal-contacts__phones">
+                                                <a href="tel:+38 (093) 502 25 25">+38 (093) 502 25 25</a>
+                                                <a href="tel:+38 (067) 502 25 25">+38 (067) 502 25 25</a>
+                                                <a href="tel:0 800 502 255">0 800 502 255</a>
+                                            </div>
+                                            <a href="tel:info.magazin@gmail.com">info.magazin@gmail.com</a>
+                                            <div class="modal-contacts__schedule">
+                                                <table>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">пн. - пт.</td>
+                                                        <td>9:00 - 18:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">сб</td>
+                                                        <td>9:00 - 15:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">нд</td>
+                                                        <td>выходной</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-contacts__item">
+                                    <div class="modal-contacts__img">
+                                        <img src="images/geo.svg" alt="Наш магазин">
+                                    </div>
+                                    <div class="modal-contacts__text">
+                                        <div class="modal-contacts__name">Наш магазин №1</div>
+                                        <div class="modal-contacts__address">Київ, вул. Пирогова, 8</div>
+                                        <div class="modal-contacts__hidden">
+                                            <div class="modal-contacts__phones">
+                                                <a href="tel:+38 (093) 502 25 25">+38 (093) 502 25 25</a>
+                                                <a href="tel:+38 (067) 502 25 25">+38 (067) 502 25 25</a>
+                                                <a href="tel:0 800 502 255">0 800 502 255</a>
+                                            </div>
+                                            <a href="tel:info.magazin@gmail.com">info.magazin@gmail.com</a>
+                                            <div class="modal-contacts__schedule">
+                                                <table>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">пн. - пт.</td>
+                                                        <td>9:00 - 18:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">сб</td>
+                                                        <td>9:00 - 15:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="modal-contacts__schedule-day">нд</td>
+                                                        <td>выходной</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal-cart micromodal-slide" id="modal-cart">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                <div class="modal__container">
+                    <div class="modal__inner">
+                        <div class="modal__content">
+                            <button class="modal__close" data-micromodal-close aria-label="Close this dialog window">
+                                <img data-micromodal-close src="images/close.svg" alt="Close modal">
+                            </button>
+                            <div class="modal-cart__wrapper">
+                                <div class="modal__head">
+                                    <div class="modal__title">В корзине 2 товара</div>
+                                </div>
+                                <div class="modal-cart__content">
+                                    <ul class="modal-cart__list">
+                                        <li class="modal-cart__item">
+                                            <div class="modal-cart__item-delete">
+                                                <img src="images/close.svg" alt="Delete item">
+                                            </div>
+                                            <div class="modal-cart__img">
+                                                <img src="images/cart-1.png" srcset="images/cart-1.png 1x, images/cart-1@2x.png 2x" alt="ноутбук">
+                                            </div>
+                                            <div class="modal-cart__item-info">
+                                                <div class="modal-cart__name">Ноутбук Asus VivoBook D540NA-GQ211T </div>
+                                                <div class="modal-cart__price">7 000 грн.</div>
+                                                <div class="modal-cart__item-foot">
+                                                    <div class="modal-cart__counter">
+                                                        <span class="modal-cart__minus modal-cart__counter-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="1" viewBox="0 0 13 1">
+                                                                <line id="Line_541" data-name="Line 541" x2="13" transform="translate(0 0.5)" fill="none" stroke="#acacbe" stroke-width="1"/>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="modal-cart__count modal-cart__counter-box">1</span>
+                                                        <span class="modal-cart__plus modal-cart__counter-box">
+                                                            <svg id="Group_502" data-name="Group 502" xmlns="http://www.w3.org/2000/svg" width="13.44" height="13.44" viewBox="0 0 13.44 13.44">
+                                                                <line id="Line_540" data-name="Line 540" y2="13.44" transform="translate(6.72 0)" fill="none" stroke="#acacbe" stroke-width="1"/>
+                                                                <line id="Line_541" data-name="Line 541" x2="13.44" transform="translate(0 6.72)" fill="none" stroke="#acacbe" stroke-width="1"/>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <div class="modal-cart__item-sum">14 000 грн.</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="modal-cart__item">
+                                            <div class="modal-cart__item-delete">
+                                                <img src="images/close.svg" alt="Delete item">
+                                            </div>
+                                            <div class="modal-cart__img">
+                                                <img src="images/cart-2.png" srcset="images/cart-2.png 1x, images/cart-2@2x.png 2x" alt="ноутбук">
+                                            </div>
+                                            <div class="modal-cart__item-info">
+                                                <div class="modal-cart__name">Ноутбук Asus VivoBook D540NA-GQ211T </div>
+                                                <div class="modal-cart__price">
+                                                    <div class="modal-cart__price-hot">7 000 грн.</div>
+                                                    <div class="modal-cart__price-old"><span>7 000</span> грн.</div>
+                                                </div>
+                                                <div class="modal-cart__item-foot">
+                                                    <div class="modal-cart__counter">
+                                                        <button class="modal-cart__minus modal-cart__counter-box">-</button>
+                                                        <span class="modal-cart__count modal-cart__counter-box">1</span>
+                                                        <button class="modal-cart__plus modal-cart__counter-box">+</button>
+                                                    </div>
+                                                    <div class="modal-cart__item-sum">14 000 грн.</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="modal-cart__foot">
+                                        <div class="modal-cart__sum">
+                                            <span class="modal-cart__sum-caption">Товаров на сумму:</span>
+                                            <span class="modal-cart__sum-count"><span>26 698</span> грн.</span>
+                                        </div>
+                                        <button class="modal-cart__btn">Оформить заказ</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
