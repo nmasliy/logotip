@@ -5,13 +5,120 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mobile header</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/mobile-header.css">
     </head>
 
     <body>
-
+        <div class="header-overlay"></div>
         <header class="mobile-header">
-            
+            <div class="mobile-header__container">
+                <div class="mobile-header__inner">
+                    <div class="mobile-header__col">
+                        <div class="mobile-header__menu-btn mobile-header__icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a class="mobile-header__icon" href="#">
+                            <img src="images/phone.svg" alt="Contacts">
+                        </a>
+                    </div>
+                    <div class="mobile-header__col">
+                        <a href="./" class="mobile-header__logo">
+                            <img width="85" src="images/logo.svg" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="mobile-header__col">
+                        <a href="#" class="mobile-header__icon">
+                            <img src="images/search.svg" alt="Search">
+                        </a>
+                        <a href="#" class="mobile-header__icon">
+                            <img src="images/cart.svg" alt="Cart">
+                            <div class="mobile-header__icon-counter">12</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-header__menu mobile-menu">
+                <a href="#" class="mobile-header__close-btn">
+                    <img src="images/close.svg" alt="Close">
+                </a>
+                <div class="mobile-menu__logo">
+                    <img width="95" src="images/logo.svg" alt="Logo">
+                </div>
+                <div class="mobile-menu__login">
+                    <div class="mobile-menu__avatar mobile-menu__avatar--unregistered">
+                        <img src="images/user.svg" alt="User">
+                    </div>
+                    <div class="mobile-menu__login-links">
+                        <a href="#">Вход</a>
+                        <a href="#">Регистрация</a>
+                    </div>
+                </div>
+                <div class="mobile-menu__head">
+                    <a href="#" class="mobile-menu__head-item">
+                        <div class="mobile-menu__head-icon">
+                            <img src="images/catalog.svg" alt="Catalog">
+                        </div>
+                        <span>Каталог</span>
+                    </a>
+                    <a href="#" class="mobile-menu__head-item">
+                        <div class="mobile-menu__head-icon">
+                            <img src="images/cart.svg" alt="Cart">
+                        </div>
+                        <span>Корзина</span>
+                        <div class="mobile-menu__head-counter">2</div>
+                    </a>
+                    <a href="#" class="mobile-menu__head-item">
+                        <div class="mobile-menu__head-icon">
+                            <img src="images/wish.svg" alt="Wish">
+                        </div>
+                        <span>Избранное</span>
+                        <div class="mobile-menu__head-counter">2</div>
+                    </a>
+                    <a href="#" class="mobile-menu__head-item">
+                        <div class="mobile-menu__head-icon">
+                            <img src="images/phone.svg" alt="Phone">
+                        </div>
+                        <span>Позвонить</span>
+                    </a>
+                </div>
+                <nav class="mobile-menu__nav">
+                    <div class="mobile-menu__nav-item">
+                        <div class="mobile-menu__nav-title">Информация о компании</div>
+                        <ul>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Правила сайта</a></li>
+                            <li><a href="#">Оферта</a></li>
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu__nav-item">
+                        <div class="mobile-menu__nav-title">Помощь</div>
+                        <ul>
+                            <li><a href="#">Доставка и оплата</a></li>
+                            <li><a href="#">Возрат / обмен</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Оферта</a></li>
+                            <li><a href="#">Видеообзоры</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu__nav-item">
+                        <div>Мы в социальных сетях</div>
+                        <ul class="mobile-menu__socials">
+                            <li><a href="#"><img src="images/viber.svg" alt="Viber"></a></li>
+                            <li><a href="#"><img src="images/telegram.svg" alt="Telegram"></a></li>
+                            <li><a href="#"><img src="images/youtube.svg" alt="Youtube"></a></li>
+                            <li><a href="#"><img src="images/instagram.svg" alt="Instagram"></a></li>
+                            <li><a href="#"><img src="images/facebook.svg" alt="Facebook"></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </header>
         
         <p>

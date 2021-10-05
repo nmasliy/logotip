@@ -29,33 +29,53 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initMenu() {
-        const $header = document.querySelector('.header');
-        const $headerBtn = document.querySelector('.header__menu-btn');
-        const $navigationItems = document.querySelectorAll('.header__navigation ul>li>a');
-        let isInit = false;
+        const $mobileMenu = document.querySelector('.mobile-menu');
+        const $headerBtn = document.querySelector('.mobile-header__menu-btn');
+        const $headerCloseBtn = document.querySelector('.mobile-header__close-btn');
+        const $headerOverlay = document.querySelector('.header-overlay');
+        const $navigationItems = document.querySelectorAll('.mobile-catalog ul>li>a');
 
-        const toggleMenu = () => {
-            $headerBtn.classList.toggle('active');
-            $header.classList.toggle('active');
-            $html.classList.toggle('overflow-hidden');
-        }
+        const transitionDelay = 300; 
 
-        const checkScreenWidth = () => {
-            // Активируем меню только на экранах <= 1024
-            if (window.innerWidth <= 1024) {
-                $headerBtn.addEventListener('click', toggleMenu);
-                $navigationItems.forEach(item => item.addEventListener('click', toggleMenu));
-                isInit = true;
+        if ($mobileMenu) {
+            const toggleMenu = () => {
+                $mobileMenu.classList.toggle('active');
+                $html.classList.toggle('overflow-hidden');
             }
+
+            const closeMenu = () => {
+                setTimeout(function() {
+                    $mobileMenu.style.display = '';
+                    $headerOverlay.style.display = '';
+                }, transitionDelay)
+
+                $mobileMenu.classList.remove('active');
+                $html.classList.remove('overflow-hidden');
+                $headerOverlay.classList.remove('active');
+            }
+
+            const openMenu = () => {
+                $mobileMenu.style.display = 'block';
+                $headerOverlay.style.display = 'block';
+
+                setTimeout(function() {
+                    $mobileMenu.classList.add('active');
+                    $html.classList.add('overflow-hidden');
+                    $headerOverlay.classList.add('active');
+                }, 50)
+                
+            }
+    
+            $headerBtn.addEventListener('click', openMenu);
+            $headerCloseBtn.addEventListener('click', closeMenu);
+            $headerOverlay.addEventListener('click', closeMenu);
+            // $navigationItems.forEach(item => item.addEventListener('click', closeMenu));
         }
 
-        window.addEventListener('resize', checkScreenWidth);
-        
-        checkScreenWidth();
     }
 
     function initModals() {
-        const $header = document.querySelector('.header');
+        const $mobileMenu = document.querySelector('.mobile-menu');
         const $modals = document.querySelectorAll('.modal');
         const $modalsTriggers = document.querySelectorAll('[data-micromodal-trigger]');
         const $modalOverlays = document.querySelectorAll('.modal__overlay');
