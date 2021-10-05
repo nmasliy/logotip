@@ -198,9 +198,24 @@
   margin-left: 20px;
 }
 
-.mobile-menu__login-links a:last-child {
+.mobile-menu__login-links a:nth-child(2) {
   border-left: 1px solid #acacbe;
   padding-left: 20px;
+}
+
+.mobile-menu__user-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 20px;
+  padding: 10px 0;
+  width: 100%;
 }
 
 .mobile-menu__head {
