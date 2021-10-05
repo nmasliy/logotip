@@ -68,9 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
             $headerBtn.addEventListener('click', openMenu);
             $headerCloseBtn.addEventListener('click', closeMenu);
             $headerOverlay.addEventListener('click', closeMenu);
-            // $navigationItems.forEach(item => item.addEventListener('click', closeMenu));
 
             initCatalog();
+            initContactsAccordion();
         }
 
         function initCatalog() {
@@ -143,12 +143,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
         }
+
+        function initContactsAccordion() {
+            const $contactsItems = document.querySelectorAll('.modal-contacts__item');
+
+            $contactsItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    if (!e.target.closest('.modal-contacts__hidden')) {
+                        item.classList.toggle('active');
+                    }
+                })
+            })
+        }
     }
 
 
 
     function initModals() {
         const $mobileMenu = document.querySelector('.mobile-menu');
+        const $mobileHeader =document.querySelector('.mobile-header'); 
         const $modals = document.querySelectorAll('.modal');
         const $modalsTriggers = document.querySelectorAll('[data-micromodal-trigger]');
         const $modalOverlays = document.querySelectorAll('.modal__overlay');
@@ -171,11 +184,11 @@ document.addEventListener('DOMContentLoaded', function() {
             MicroModal.init({
                 onShow: (modal) => {
                     hideScroll();
-                    $header.style.pointerEvents = 'none';
+                    $mobileHeader.style.pointerEvents = 'none';
                 },
                 onClose: (modal) => {
                     showScroll();
-                    setTimeout(() => $header.style.pointerEvents = '', 500)
+                    setTimeout(() => $mobileHeader.style.pointerEvents = '', 500)
                 },
                 disableFocus: true,
                 openClass: 'is-open', 
