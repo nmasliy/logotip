@@ -161,7 +161,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function initModals() {
         const $mobileMenu = document.querySelector('.mobile-menu');
-        const $mobileHeader =document.querySelector('.mobile-header'); 
+        const $headerOverlay = document.querySelector('.header-overlay');
+        const $mobileHeader = document.querySelector('.mobile-header'); 
         const $modals = document.querySelectorAll('.modal');
         const $modalsTriggers = document.querySelectorAll('[data-micromodal-trigger]');
         const $modalOverlays = document.querySelectorAll('.modal__overlay');
@@ -185,10 +186,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 onShow: (modal) => {
                     hideScroll();
                     $mobileHeader.style.pointerEvents = 'none';
+                    $mobileMenu.style.pointerEvents = 'none';
+                    $headerOverlay.style.pointerEvents = 'none';
                 },
                 onClose: (modal) => {
                     showScroll();
-                    setTimeout(() => $mobileHeader.style.pointerEvents = '', 500)
+                    setTimeout(() => {
+                        $mobileHeader.style.pointerEvents = '';
+                        $mobileMenu.style.pointerEvents = '';
+                        $headerOverlay.style.pointerEvents = '';
+                    }, 500)
                 },
                 disableFocus: true,
                 openClass: 'is-open', 
