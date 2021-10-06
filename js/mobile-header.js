@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 $mobileMenu.classList.remove('active');
                 $html.classList.remove('overflow-hidden');
                 $headerOverlay.classList.remove('active');
+                showScroll();
             }
 
             const openMenu = () => {
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     $mobileMenu.classList.add('active');
                     $html.classList.add('overflow-hidden');
                     $headerOverlay.classList.add('active');
+                    hideScroll();
                 }, 50)
                 
             }
