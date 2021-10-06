@@ -137,8 +137,8 @@
     padding: 20px 15px;
 
     box-sizing: border-box;
-    transform: translateX(-200%);
-    transition: .3s ease;
+    transform: translateX(-120%);
+    transition: .4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
 
     &.active {
         transform: translateX(0);
@@ -276,6 +276,7 @@
         padding: 0 15px;
         padding-bottom: 20px;
         margin-bottom: 20px;
+        transition: .4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
     }
 
     &__catalog-back {
@@ -298,10 +299,10 @@
         height: 100%;
         
         background-color: #fff;
-
+        
         box-sizing: border-box;
-        transform: translateX(-200%);
-        transition: .3s ease-in-out;
+        transform: translateX(120%);
+        transition: .4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
         
         &.open {
             transform: translateX(0);
@@ -310,6 +311,7 @@
         ul {
             margin: 0;
             padding: 0;
+            transition: .4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
         }
 
         .mobile-menu__catalog-menu {
@@ -726,6 +728,7 @@
     
     &__content {
         padding-bottom: 60px;
+        overflow: hidden;
     }
 
     &__input {

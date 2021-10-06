@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const $headerCloseBtn = document.querySelector('.mobile-header__close-btn');
         const $headerOverlay = document.querySelector('.header-overlay');
 
-        const transitionDelay = 300; 
+        const transitionDelay = 400; 
 
         if ($mobileMenu) {
             const toggleMenu = () => {
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const $openButtons = document.querySelectorAll('.mobile-menu__catalog-btn');
             const $catalogCloseButton = document.querySelector('.modal-catalog .modal__close');
 
-            const openCatalog = (menu) => {
+            const openCatalog = (menu, button) => {
                 
                 menu.style.display = 'block';
 
@@ -88,9 +88,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     const $catalogs = document.querySelectorAll('.mobile-menu__catalog-menu.open');
                     $catalogs.length > 0 ? $mobileMenu.style.height = 'auto' : $mobileMenu.style.height = '';
                 }, 50)
+                
             }
 
-            const closeCatalog = (menu) => {
+            const closeCatalog = (menu, button) => {
                 menu.classList.remove('open');
 
                 setTimeout(function() {
@@ -118,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                         if (item.nextElementSibling) {
                             e.preventDefault();
-                            openCatalog(item.nextElementSibling);
+                            openCatalog(item.nextElementSibling, item);
                         }
 
                     })
@@ -135,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             $mobileMenu.style.height = '';
                         }
 
-                        closeCatalog(btn.closest('.mobile-menu__catalog-menu'));
+                        closeCatalog(btn.closest('.mobile-menu__catalog-menu'), btn);
                     })
                 })
 

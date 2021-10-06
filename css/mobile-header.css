@@ -144,10 +144,10 @@
   padding: 20px 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
+  -webkit-transform: translateX(-120%);
+          transform: translateX(-120%);
+  -webkit-transition: 0.4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
+  transition: 0.4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
 }
 
 .mobile-menu.active {
@@ -313,6 +313,8 @@
   padding: 0 15px;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  -webkit-transition: 0.4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
+  transition: 0.4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
 }
 
 .mobile-menu__catalog-back {
@@ -338,10 +340,10 @@
   background-color: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
+  -webkit-transition: 0.4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
+  transition: 0.4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
 }
 
 .mobile-menu__catalog-menu.open {
@@ -352,6 +354,8 @@
 .mobile-menu__catalog-menu ul {
   margin: 0;
   padding: 0;
+  -webkit-transition: 0.4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
+  transition: 0.4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
 }
 
 .mobile-menu__catalog-menu .mobile-menu__catalog-menu .mobile-menu__catalog-menu {
@@ -805,6 +809,7 @@
 
 .modal-search__content {
   padding-bottom: 60px;
+  overflow: hidden;
 }
 
 .modal-search__input {
