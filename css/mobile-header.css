@@ -287,6 +287,10 @@
   border-radius: 50%;
 }
 
+.mobile-menu__catalog {
+  margin-bottom: 10px;
+}
+
 .mobile-menu__catalog-title {
   font-weight: 600;
   font-size: 16px;

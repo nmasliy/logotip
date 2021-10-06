@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         function initCatalog() {
             const $backButtons = document.querySelectorAll('.mobile-menu__catalog-back');
             const $openButtons = document.querySelectorAll('.mobile-menu__catalog-btn');
+            const $catalogCloseButton = document.querySelector('.modal-catalog .modal__close');
 
             const openCatalog = (menu) => {
                 
@@ -139,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
 
                 $headerOverlay.addEventListener('click', closeAllCatalogs);
-                
+                $catalogCloseButton.addEventListener('click', closeAllCatalogs);
             }
 
         }
@@ -157,8 +158,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-
-
     function initModals() {
         const $mobileMenu = document.querySelector('.mobile-menu');
         const $headerOverlay = document.querySelector('.header-overlay');
@@ -170,7 +169,13 @@ document.addEventListener('DOMContentLoaded', function() {
         $modalOverlays.forEach(overlay => {
             overlay.addEventListener('click', function(e) {
                 if (!e.target.closest('.modal__inner')) {
-                    MicroModal.close(overlay.closest('.modal').id);
+                    overlay.closest('.modal').classList.remove('is-open');
+                    showScroll();
+                    setTimeout(() => {
+                        $mobileHeader.style.pointerEvents = '';
+                        $mobileMenu.style.pointerEvents = '';
+                        $headerOverlay.style.pointerEvents = '';
+                    }, 500)
                 }
             })
         })
