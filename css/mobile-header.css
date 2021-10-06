@@ -320,8 +320,6 @@ body {
   padding: 0 15px;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  -webkit-transition: 0.4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
-  transition: 0.4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
 }
 
 .mobile-menu__catalog-back {
@@ -361,8 +359,6 @@ body {
 .mobile-menu__catalog-menu ul {
   margin: 0;
   padding: 0;
-  -webkit-transition: 0.4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
-  transition: 0.4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
 }
 
 .mobile-menu__catalog-menu .mobile-menu__catalog-menu .mobile-menu__catalog-menu {

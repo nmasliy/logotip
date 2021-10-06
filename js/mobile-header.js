@@ -83,18 +83,22 @@ document.addEventListener('DOMContentLoaded', function() {
             const openCatalog = (menu, button) => {
                 
                 menu.style.display = 'block';
+                button.closest('.mobile-menu__catalog-menu').style.left = '-50px';
 
                 setTimeout(function() {
                     menu.classList.add('open');
-
                     const $catalogs = document.querySelectorAll('.mobile-menu__catalog-menu.open');
                     $catalogs.length > 0 ? $mobileMenu.style.height = 'auto' : $mobileMenu.style.height = '';
                 }, 50)
-                
+
+                setTimeout(function() {
+                    button.closest('.mobile-menu__catalog-menu').style.left = '';
+                }, transitionDelay / 2)
+
             }
 
             const closeCatalog = (menu, button) => {
-                menu.classList.remove('open');
+                button.closest('.mobile-menu__catalog-menu').classList.remove('open');
 
                 setTimeout(function() {
                     menu.style.display = '';
