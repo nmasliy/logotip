@@ -698,10 +698,12 @@
     font-size: 12px;
 
     .modal {
+        &__container {
+            height: 100%;
+        }
         &__content {
             overflow: auto;
-            max-height: calc(100vh - 50px);
-            height: 100%;
+            height: calc(100% - 50px);
         }
 
         &__inner {
@@ -733,6 +735,7 @@
             display: block;
             padding: 10px;
             width: 100%;
+            border-radius: 0;
             -webkit-appearance: textfield;
             &::-webkit-search-decoration {
                 -webkit-appearance: none;

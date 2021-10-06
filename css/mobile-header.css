@@ -776,10 +776,13 @@
   font-size: 12px;
 }
 
+.modal-search .modal__container {
+  height: 100%;
+}
+
 .modal-search .modal__content {
   overflow: auto;
-  max-height: calc(100vh - 50px);
-  height: 100%;
+  height: calc(100% - 50px);
 }
 
 .modal-search .modal__inner {
@@ -816,6 +819,7 @@
   display: block;
   padding: 10px;
   width: 100%;
+  border-radius: 0;
   -webkit-appearance: textfield;
 }
 
