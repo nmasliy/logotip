@@ -199,6 +199,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 disableFocus: true,
                 openClass: 'is-open', 
+                awaitOpenAnimation: true,
+                awaitCloseAnimation: true,
             });
         }
     }
