@@ -169,10 +169,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         $modalOverlays.forEach(overlay => {
             overlay.addEventListener('click', function(e) {
-                const modalId = overlay.closest('.modal').id;
-                
-                if (e.target.classList.contains('modal__container') || e.target.classList.contains('modal__overlay')) {
-                    MicroModal.close(modalId);
+                if (!e.target.closest('.modal__inner')) {
+                    MicroModal.close(overlay.closest('.modal').id);
                 }
             })
         })

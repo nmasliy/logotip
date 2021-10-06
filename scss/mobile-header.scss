@@ -536,6 +536,14 @@
         &__inner {
             padding: 0;
         }
+
+        &__container {
+            height: 100%;
+        }
+        &__content {
+            overflow: auto;
+            height: calc(100% - 50px);
+        }
     }
 
     &__wrapper {
@@ -808,14 +816,22 @@
     &__menu {
         display: block;
         transform: none;
+        height: 100%;
+        overflow: auto;
+        min-height: 100%;
+        padding-bottom: 80px;
     }
     &__title {
         margin-left: auto;
         margin-right: auto;
     }
     .modal {
+        &__container {
+            height: 100%;
+        }
         &__inner {
-            height: calc(100vh - 50px);
+            height: calc(100% - 50px);
+            min-height: 100%;
             padding: 20px 15px;
         }
     }
