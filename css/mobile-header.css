@@ -699,7 +699,12 @@ body {
 }
 
 .modal-cart__foot {
-  padding-top: 20px;
+  position: fixed;
+  left: 15px;
+  width: calc(100% - 30px);
+  bottom: 0;
+  background-color: #fff;
+  z-index: 3;
   margin-top: auto;
   margin-left: -15px;
   margin-right: -15px;

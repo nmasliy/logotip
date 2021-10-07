@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function initModals() {
         const $mobileMenu = document.querySelector('.mobile-menu');
         const $headerOverlay = document.querySelector('.header-overlay');
-        const $mobileHeader = document.querySelector('.mobile-header'); 
+        const $ombileHeader = document.querySelector('.mobile-header'); 
         const $modals = document.querySelectorAll('.modal');
         const $modalsTriggers = document.querySelectorAll('[data-micromodal-trigger]');
         const $modalOverlays = document.querySelectorAll('.modal__overlay');
