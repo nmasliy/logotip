@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/mobile-header.css">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
     </head>
 
     <body>
@@ -141,13 +142,55 @@
             </div>
         </header>
 
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, reiciendis!
-        </p>
+        <div class="categories">
+            <ul class="categories__list">
+                <li class="categories__item">
+                    <a href="#">
+                        <img src="images/category-1.png" alt="Рубашки, футболки">
+                        <span>Рубашки, футболки</span>
+                    </a>
+                </li>
+                <li class="categories__item">
+                    <a href="#">
+                        <img src="images/category-2.png" alt="Кофты, свитера">
+                        <span>Кофты, свитера</span>
+                    </a>
+                </li>
+                <li class="categories__item">
+                    <a href="#">
+                        <img src="images/category-3.png" alt="Джинсы, брюки">
+                        <span>Джинсы, брюки</span>
+                    </a>
+                </li>
+                <li class="categories__item">
+                    <a href="#">
+                        <img src="images/category-4.png" alt="Рубашки, футболки">
+                        <span>Спортивная одежда</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
         
-        <p>
-            Soluta accusantium culpa pariatur esse ut animi similique, deserunt nobis sint harum provident expedita. Libero odio dolores, ab dolore repellendus, unde assumenda ipsum in eius exercitationem quae, quis consequuntur deserunt blanditiis laboriosam sed fugiat labore accusantium reprehenderit. Dolorem expedita nihil in reprehenderit illo, cumque quaerat exercitationem. Ut dignissimos excepturi voluptatum quia eos illo hic sed iste praesentium dolor repellat, quo sequi fugit distinctio illum fuga perspiciatis. Illum sed sint, perspiciatis magni in architecto recusandae, quia saepe modi consequuntur rerum delectus accusamus molestiae ducimus. Natus corporis expedita autem officiis sit reprehenderit impedit deleniti ipsam minima necessitatibus dignissimos cupiditate modi officia consequatur repudiandae molestiae, neque nam dolores dolorem odit doloremque non pariatur, tempore labore. Laboriosam commodi a sequi deleniti temporibus, possimus nam officia sunt repellat laudantium necessitatibus, enim aliquid placeat, quidem voluptates eos! Inventore expedita, optio obcaecati, cupiditate eum voluptate sequi, sapiente sit ducimus iure quibusdam dolores aut eveniet reiciendis veniam illo itaque natus excepturi! Delectus ipsum distinctio consequatur officia officiis quae! Quos facere, eos reiciendis harum tempora autem incidunt maxime quod nobis a. Iste quas eos sunt dolores ipsam dolorum eum, est quasi molestiae aut modi voluptas? Minus accusamus aperiam velit porro sequi!
-        </p>
+        <section class="hero-slider">
+            <div class="hero-slider__inner swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide hero-slider__item">
+                        <img src="images/slider-1.png" alt="Sport sale">
+                    </div>
+                    <div class="swiper-slide hero-slider__item">
+                        <img src="images/slider-1.png" alt="Sport sale">
+                    </div>
+                    <div class="swiper-slide hero-slider__item">
+                        <img src="images/slider-1.png" alt="Sport sale">
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slider__pagination"></div>
+            <a href="#" class="hero-slider__btn" data-micromodal-trigger="modal-catalog">
+                <img src="images/catalog-icon.svg" alt="Каталог">
+                <span>Каталог товаров</span>
+            </a>
+        </section>
 
 
         <div class="header-overlay" data-micromodal-close=""></div>
@@ -867,6 +910,7 @@
 
         <script src="js/micromodal.min.js"></script>
         <script src="js/mobile-header.js"></script>
+        <script src="js/swiper-bundle.min.js"></script>
 
     </body>
 

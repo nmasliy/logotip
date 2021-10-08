@@ -215,6 +215,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function initHeroSlider() {
+        const $heroSlider = document.querySelector('.hero-slider__inner');
+        if ($heroSlider) {
+            const reviewsSlider = new Swiper('.hero-slider__inner', {
+                pagination: {
+                    el: ".hero-slider__pagination",
+                },
+                spaceBetween: 50
+            });
+        }
+    }
+
     initMenu();
     initModals();
+    initHeroSlider();
 })
