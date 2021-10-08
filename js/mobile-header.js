@@ -168,14 +168,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function initModals() {
         const $mobileMenu = document.querySelector('.mobile-menu');
         const $headerOverlay = document.querySelector('.header-overlay');
-        const $ombileHeader = document.querySelector('.mobile-header'); 
+        const $mobileHeader = document.querySelector('.mobile-header'); 
         const $modals = document.querySelectorAll('.modal');
         const $modalsTriggers = document.querySelectorAll('[data-micromodal-trigger]');
         const $modalOverlays = document.querySelectorAll('.modal__overlay');
 
         $modalOverlays.forEach(overlay => {
             overlay.addEventListener('click', function(e) {
-                if (!e.target.closest('.modal__inner')) {
+                if (!e.target.closest('.modal__inner') && !(e.target.closest('.modal-cart__item-delete'))) {
                     overlay.closest('.modal').classList.remove('is-open');
                     showScroll();
                     setTimeout(() => {
@@ -222,12 +222,110 @@ document.addEventListener('DOMContentLoaded', function() {
                 pagination: {
                     el: ".hero-slider__pagination",
                 },
+                loop: true,
                 spaceBetween: 50
             });
         }
     }
 
+    function initSendCartData() {
+        const $plusBtn = document.querySelector('.modal-cart__plus');
+        const $minusBtn = document.querySelector('.modal-cart__minus');
+
+        const $buttons = [$plusBtn, $minusBtn];
+        const $count = document.querySelector('.modal-cart__count');
+
+        const url = document.querySelector('.modal-cart__counter').dataset.url;
+
+        $buttons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                postData(url, { quantity: $count.textContent })
+                    .then((data) => {
+                        console.log(data); 
+                    })
+                    .catch(err => console.log(err));
+            })
+        })
+    }
+
+    function initGetDataContactsAndCart() {
+        const $cartBtns = document.querySelectorAll('.mobile-header__cart-btn');
+        const $cartRoot = document.querySelector('.modal-cart__wrapper');
+        
+        const $contactsBtns = document.querySelectorAll('.mobile-header__contacts-btn');
+        const $contactsRoot = document.querySelector('.modal-contacts__items');
+
+
+        $contactsBtns.forEach(button => {
+            const url = button.dataset.url;
+
+            button.addEventListener('click', function() {
+                fetch(url) 
+                    .then(response => response.text())
+                    .then(html => $contactsRoot.innerHTML = html)
+                    .catch(err => console.error(err));
+            })
+        })
+
+        $cartBtns.forEach(button => {
+            const url = button.dataset.url;
+            
+            button.addEventListener('click', function() {
+                fetch(url) 
+                    .then(response => response.text())
+                    .then(html => $cartRoot.innerHTML = html)
+                    .catch(err => console.error(err));
+            })
+        })
+
+    }
+
+    function initDeleteCartItem() {
+        const $deleteButtons = document.querySelectorAll('.modal-cart__item-delete');
+
+        $deleteButtons.forEach(btn => {
+            const url = btn.dataset.url;
+
+            btn.addEventListener('click', function() {
+                const item = btn.closest('.modal-cart__item');
+                item.parentNode.removeChild(item);
+                fetch(url) 
+                    .then(response => response.json())
+                    .then(response => {
+                        if (response.success === true) {
+                            const item = btn.closest('.modal-cart__item');
+                            item.parentNode.removeChild(item);
+                        }
+                    })
+                    .catch(err => console.error(err));
+            })
+        })
+    }
+    
+
+
+    async function postData(url = '', data = {}) {
+        // Default options are marked with *
+        const response = await fetch(url, {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            redirect: 'follow', // manual, *follow, error
+            referrerPolicy: 'no-referrer', // no-referrer, *client
+            body: JSON.stringify(data) // body data type must match "Content-Type" header
+        });
+        return await response.json(); // parses JSON response into native JavaScript objects
+    }
+
     initMenu();
     initModals();
     initHeroSlider();
+    initSendCartData();
+    initGetDataContactsAndCart();
+    initDeleteCartItem();
 })
