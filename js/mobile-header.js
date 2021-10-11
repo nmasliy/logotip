@@ -172,20 +172,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const $modals = document.querySelectorAll('.modal');
         const $modalsTriggers = document.querySelectorAll('[data-micromodal-trigger]');
         const $modalOverlays = document.querySelectorAll('.modal__overlay');
-
-        $modalOverlays.forEach(overlay => {
-            overlay.addEventListener('click', function(e) {
-                if (!e.target.closest('.modal__inner') && !(e.target.closest('.modal-cart__item-delete'))) {
-                    overlay.closest('.modal').classList.remove('is-open');
-                    showScroll();
-                    setTimeout(() => {
-                        $mobileHeader.style.pointerEvents = '';
-                        $mobileMenu.style.pointerEvents = '';
-                        $headerOverlay.style.pointerEvents = '';
-                    }, 650)
-                }
-            })
-        })
         
         $modalsTriggers.forEach(item => {
             item.addEventListener('click', (e) => e.preventDefault());

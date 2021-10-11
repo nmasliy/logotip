@@ -348,8 +348,8 @@ body {
           box-sizing: border-box;
   -webkit-transform: translateX(120%);
           transform: translateX(120%);
-  -webkit-transition: 0.4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
-  transition: 0.4s cubic-bezier(0.32, 0.2, 0.1, 0.98);
+  -webkit-transition: 0.6s cubic-bezier(0.32, 0.2, 0.1, 0.98);
+  transition: 0.6s cubic-bezier(0.32, 0.2, 0.1, 0.98);
 }
 
 .mobile-menu__catalog-menu.open {
@@ -1124,23 +1124,23 @@ body {
 }
 
 .micromodal-slide[aria-hidden="false"] .modal__overlay {
-  -webkit-animation: slideIn 0.65s cubic-bezier(0, 0, 0.2, 1);
-          animation: slideIn 0.65s cubic-bezier(0, 0, 0.2, 1);
+  -webkit-animation: slideIn 0.6s cubic-bezier(0, 0, 0.2, 1);
+          animation: slideIn 0.6s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .micromodal-slide[aria-hidden="false"] .modal__container {
-  -webkit-animation: slideIn 0.65s cubic-bezier(0, 0, 0.2, 1);
-          animation: slideIn 0.65s cubic-bezier(0, 0, 0.2, 1);
+  -webkit-animation: slideIn 0.6s cubic-bezier(0, 0, 0.2, 1);
+          animation: slideIn 0.6s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .micromodal-slide[aria-hidden="true"] .modal__overlay {
-  -webkit-animation: slideOut 0.65s ease-out;
-          animation: slideOut 0.65s ease-out;
+  -webkit-animation: slideOut 0.6s ease-out;
+          animation: slideOut 0.6s ease-out;
 }
 
 .micromodal-slide[aria-hidden="true"] .modal__container {
-  -webkit-animation: slideOut 0.65s ease-out;
-          animation: slideOut 0.65s ease-out;
+  -webkit-animation: slideOut 0.6s ease-out;
+          animation: slideOut 0.6s ease-out;
 }
 
 .micromodal-slide .modal__container,
