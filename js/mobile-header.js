@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         $mobileHeader.style.pointerEvents = '';
                         $mobileMenu.style.pointerEvents = '';
                         $headerOverlay.style.pointerEvents = '';
-                    }, 500)
+                    }, 650)
                 }
             })
         })
@@ -198,6 +198,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     $mobileHeader.style.pointerEvents = 'none';
                     $mobileMenu.style.pointerEvents = 'none';
                     $headerOverlay.style.pointerEvents = 'none';
+                    $modalOverlays.forEach(overlay => {
+                        overlay.style.pointerEvents = 'none';
+                        setTimeout(() => {
+                            overlay.style.pointerEvents = '';
+                        }, 800)
+                    })
                 },
                 onClose: (modal) => {
                     showScroll();
@@ -205,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         $mobileHeader.style.pointerEvents = '';
                         $mobileMenu.style.pointerEvents = '';
                         $headerOverlay.style.pointerEvents = '';
-                    }, 500)
+                    }, 650)
                 },
                 disableFocus: true,
                 openClass: 'is-open', 

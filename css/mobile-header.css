@@ -27,6 +27,7 @@ body {
 
 .mobile-header__container {
   padding: 0 10px;
+  max-width: calc(100vw - 20px);
 }
 
 .mobile-header__inner {
@@ -1071,7 +1072,7 @@ body {
 /**************************\
     Demo Animation Style
 \**************************/
-@-webkit-keyframes mmfadeIn {
+@-webkit-keyframes slideIn {
   from {
     -webkit-transform: translateY(200%);
             transform: translateY(200%);
@@ -1081,7 +1082,7 @@ body {
             transform: translateY(0);
   }
 }
-@keyframes mmfadeIn {
+@keyframes slideIn {
   from {
     -webkit-transform: translateY(200%);
             transform: translateY(200%);
@@ -1089,28 +1090,28 @@ body {
   to {
     -webkit-transform: translateY(0);
             transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes mmfadeOut {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(200%);
-            transform: translateY(200%);
   }
 }
 
-@keyframes mmfadeOut {
+@-webkit-keyframes slideOut {
   from {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
   to {
-    -webkit-transform: translateY(200%);
-            transform: translateY(200%);
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
   }
 }
 
@@ -1123,23 +1124,23 @@ body {
 }
 
 .micromodal-slide[aria-hidden="false"] .modal__overlay {
-  -webkit-animation: mmfadeIn 0.65s cubic-bezier(0, 0, 0.2, 1);
-          animation: mmfadeIn 0.65s cubic-bezier(0, 0, 0.2, 1);
+  -webkit-animation: slideIn 0.65s cubic-bezier(0, 0, 0.2, 1);
+          animation: slideIn 0.65s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .micromodal-slide[aria-hidden="false"] .modal__container {
-  -webkit-animation: mmslideIn 0.65s cubic-bezier(0, 0, 0.2, 1);
-          animation: mmslideIn 0.65s cubic-bezier(0, 0, 0.2, 1);
+  -webkit-animation: slideIn 0.65s cubic-bezier(0, 0, 0.2, 1);
+          animation: slideIn 0.65s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .micromodal-slide[aria-hidden="true"] .modal__overlay {
-  -webkit-animation: mmfadeOut 0.65s cubic-bezier(0, 0, 0.2, 1);
-          animation: mmfadeOut 0.65s cubic-bezier(0, 0, 0.2, 1);
+  -webkit-animation: slideOut 0.65s ease-out;
+          animation: slideOut 0.65s ease-out;
 }
 
 .micromodal-slide[aria-hidden="true"] .modal__container {
-  -webkit-animation: mmslideOut 0.65s cubic-bezier(0, 0, 0.2, 1);
-          animation: mmslideOut 0.65s cubic-bezier(0, 0, 0.2, 1);
+  -webkit-animation: slideOut 0.65s ease-out;
+          animation: slideOut 0.65s ease-out;
 }
 
 .micromodal-slide .modal__container,

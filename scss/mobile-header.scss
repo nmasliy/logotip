@@ -29,6 +29,7 @@ body {
 
     &__container {
         padding: 0 10px;
+        max-width: calc(100vw - 20px);
     }
 
     &__inner {
@@ -955,25 +956,21 @@ body {
 /**************************\
     Demo Animation Style
 \**************************/
-@keyframes mmfadeIn {
+@keyframes slideIn {
     from {
         transform: translateY(200%);
-        // opacity: 0;
     }
     to {
         transform: translateY(0);
-        // opacity: 1;
     }
 }
 
-@keyframes mmfadeOut {
+@keyframes slideOut {
     from {
         transform: translateY(0);
-        // opacity: 1;
     }
     to {
-        transform: translateY(200%);
-        // opacity: 0;
+        transform: translateY(100%);
     }
 }
 
@@ -986,19 +983,19 @@ body {
 }
 
 .micromodal-slide[aria-hidden="false"] .modal__overlay {
-    animation: mmfadeIn 0.65s cubic-bezier(0, 0, 0.2, 1);
+    animation: slideIn 0.65s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .micromodal-slide[aria-hidden="false"] .modal__container {
-    animation: mmslideIn 0.65s cubic-bezier(0, 0, 0.2, 1);
+    animation: slideIn 0.65s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .micromodal-slide[aria-hidden="true"] .modal__overlay {
-    animation: mmfadeOut 0.65s cubic-bezier(0, 0, 0.2, 1);
+    animation: slideOut 0.65s ease-out;
 }
 
 .micromodal-slide[aria-hidden="true"] .modal__container {
-    animation: mmslideOut 0.65s cubic-bezier(0, 0, 0.2, 1);
+    animation: slideOut 0.65s ease-out;
 }
 
 .micromodal-slide .modal__container,
